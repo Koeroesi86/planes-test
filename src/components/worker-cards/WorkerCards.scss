@@ -1,0 +1,68 @@
+.WorkerCards {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  &-position {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &-no-result {
+    text-align: center;
+  }
+
+  &-spacer {
+    height: 3px;
+  }
+
+  &-stack {
+    position: relative;
+    min-height: 200px;
+
+    .WorkerCards-worker {
+      position: absolute;
+      width: 100%;
+
+      &::after {
+        display: block;
+        content: "";
+        height: 3px;
+      }
+
+      &:nth-child(n+2) {
+      }
+
+      $total: 20;
+      @for $i from 2 through $total {
+        &:nth-child(#{$i}) {
+          z-index: $total - $i;
+        }
+      }
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 120%;
+    width: 100%;
+    text-align: center;
+
+    .button {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      margin: 0 30px;
+      background: transparent center center no-repeat;
+
+      &.like {
+        background-image: url("./images/like.jpg");
+      }
+
+      &.dislike {
+        background-image: url("./images/dislike.jpg");
+      }
+    }
+  }
+}

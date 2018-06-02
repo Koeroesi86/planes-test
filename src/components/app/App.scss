@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e3e3e3;
+
+  &-header {
+    &-image {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &-contents {
+    flex-grow: 1;
+    overflow: visible;
+    display: flex;
+  }
+}
