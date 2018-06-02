@@ -10,11 +10,3 @@ Please enter in a console/terminal:
     
     yarn install
     yarn start
-
-
-### Testing
-
-Please enter in a console/terminal:
-
-    yarn test
-
